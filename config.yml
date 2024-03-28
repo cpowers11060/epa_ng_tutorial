@@ -1,0 +1,25 @@
+# cluster_config.yml - cluster configuration
+__default__:
+    time: 1:00:00 # time limit for each job
+    nodes: 1
+    ntasks-per-node: 1
+    mem: 60GB
+    partition: uri-cpu
+phylogeny:
+    time: 1:00:00 # time limit for each job
+    nodes: 1
+    ntasks-per-node: 8
+    mem: 128GB
+    partition: uri-cpu
+qiime:
+    time: 1:00:00 # time limit for each job
+    nodes: 1
+    ntasks-per-node: 8
+    mem: 128GB
+    partition: uri-cpu
+filter_bad_Amplicons:
+    time: 1:00:00 # time limit for each job
+    nodes: 1
+    ntasks-per-node: 8
+    mem: 128GB
+    partition: uri-cpu
