@@ -1,14 +1,12 @@
 rule all:
-
+    input:
+        "09_ref_tree/taxa_COI_assignment.done"
 
 rule tree_assignment:
-    input:
-        "09_ref_tree/ref_{gene}_tree.done"
     output:
         "09_ref_tree/taxa_{gene}_assignment.done"
     shell:
         """
-        cp RAxML_bipartitions.ref_{wildcards.gene}_db.out 09_ref_tree/RAxML_bipartitions.ref_{wildcards.gene}_db.tre
         module purge
         module load miniconda/22.11.1-1
         conda activate raxml_env
